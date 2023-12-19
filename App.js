@@ -101,6 +101,7 @@ console.log(quesBox);
 console.log(options);
 let counter = 0;
 let totalScore = 0;
+let correct = 0;
 const startQuizBtn = document.getElementById("startQuizBtn");
 const quizContainer = document.getElementById("quiz-Container");
 
@@ -135,7 +136,7 @@ const loadQuestion = () => {
 const endQuiz = () => {
   quesBox[0].innerHTML = `
   <div>
-            <h3>You've scored ${totalScore} out of ${quesLen * 10} </h3>
+            <h3>You've got ${correct} out of ${quesLen} correct </h3>
             <h3>And your percentage of Correct Answer is ${
               (totalScore / 100) * 100
             }</h3>
@@ -172,6 +173,7 @@ submitBtn.addEventListener("click", function () {
   let ans = answerCheck();
   const data = Questions[counter];
   if (ans == data.correctOption) {
+    correct += 1;
     totalScore += 10;
   }
   counter++;

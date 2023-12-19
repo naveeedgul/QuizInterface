@@ -27,7 +27,7 @@ h1 {
 
 label {
   display: block;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 button {
@@ -59,4 +59,11 @@ button:hover {
 
 #startQuizBtn:hover {
   background-color: #45a049;
+}
+.labels {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  padding: 10px;
+  /* -left: 10px; */
 }
